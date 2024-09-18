@@ -1,13 +1,19 @@
+/*estilos básicos*/
 * {
     margin: 0;
-    padding: 0;
-    list-style: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6; /* distância entre linhas */
+    font-family: Arial, Helvetica, sans-serif
 }
 
+html { 
+
+}
+
+
 header {
-    padding: 50px;
-    background-color: rgb(0, 217, 255);
+    padding: 1rem; /* padding rem para consistência com o tamanho da fonte raiz */
+    background-color: #3498db;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,4 +24,64 @@ header h1 {
     color: white;
 }
 
+.main-content {
+    padding: 2rem; /* Espaçamento interno da área principal */
+    color: #000000;
+    background-color: blueviolet;
+}
 
+.section {
+    padding: 2em; /* Padding em, relativo ao tamanho da fonte do pai */
+    margin-bottom: 2em; /* Espaço abaixo de cada seção */
+    border-radius: 8px;
+    position: relative; /**/
+}
+
+.section-1 {
+    background-color: red;
+    color: white;
+}
+
+.section-2 {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.section-3 {
+    background-color: #f39c12;
+    color: white;
+}
+
+
+/*Estilos das caixas*/
+.box {
+    background-color: aliceblue;
+    color: #000000;
+    padding: 2rem; /* Padding aumentado para maior visibilidade */
+    margin: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem; /*Tamanho da fonte aumentado para maior legibilidade*/
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura*/
+}
+
+
+/*layout das caixas*/
+
+.box-1, .box-2, .box-3, .box-4, .box-5, .box-6 {
+    width: calc(50% - 2rem); /* Largura das caixas ajustada para caber duas por linha com espaçamento */
+    float: left; /*Trabalha com a distribuição dos elementos elemento*/
+}
+
+.section::after {
+    content: ""; /*Adiciona um elemento invisível após o conteúdo da seção*/
+    display: table; /* Faz com que o elemento invidível se comporte como um bloco, forçando o contêiner a incluir elementos flutuantes*/
+    clear: both; /* Garante que o contêiner "limpe" os elementos flutuantes, evitando problemas de layout */
+}
+
+/*Ajuste para telas grandes (largura acima de 1200px)*/
+@media (min-width: 1200px;) {
+    .box {
+        width: calc(33.333% - 2rem); /* Largura de 33.333% para três caixas por linha */
+    }
+}
