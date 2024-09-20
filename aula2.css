@@ -5,18 +5,12 @@
     font-family: Arial, Helvetica, sans-serif
 }
 
-html { 
-
-}
-
 
 header {
     padding: 1rem; /* padding rem para consistência com o tamanho da fonte raiz */
     background-color: #3498db;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   text-align: center;
 }
 
 header h1 {
@@ -34,7 +28,7 @@ header h1 {
     padding: 2em; /* Padding em, relativo ao tamanho da fonte do pai */
     margin-bottom: 2em; /* Espaço abaixo de cada seção */
     border-radius: 8px;
-    position: relative; /**/
+    position: relative; /*O elemento é posicionado em relação à sua posição original. Você pode usar os atributos top, rigth, bottom e left para movê-lo.*/
 }
 
 .section-1 {
@@ -78,6 +72,7 @@ header h1 {
     É como de você estivesse empurrando as caixas para o lado esquerdo da mesa. Isso faz com uqe, quando você coloca uma nova caixa, ela "desça" para a próxima linha, mantendo as outras caixas alinhadas*/
 }
 
+
 /*Limpeza do float*/
 .section::after {
     content: ""; /*Adiciona um elemento invisível após o conteúdo da seção
@@ -91,7 +86,8 @@ header h1 {
 
     clear: both; /* Garante que o contêiner "limpe" os elementos flutuantes, evitando problemas de layout
     
-    Isso garante que, após as ciaxas de frutas (ou outros itens) na mesa, nada mais flutue ao lado. è como se você estivesse dizendo: "Depois da namdeja vazia, nada pode ficar ao lado; tudo deve ficar em uma nova linha." Isso evita que a mesa fique desorganizada e os itens se sobreponham. */
+    Isso garante que, após as ciaxas de frutas (ou outros itens) na mesa, nada mais flutue ao lado. è como se você estivesse dizendo: "Depois da namdeja vazia, nada pode ficar ao lado; tudo deve ficar em uma nova linha." Isso evita que a mesa fique desorganizada e os itens se sobreponham. 
+    Essa propriedade é crucial para evitar sobreposições. Sem o clear: both:, o contêiner pode não se expandir para incluir todos os elementos flutuantes, fazendo com que o layout fique desorganizado. Isso garante que, após as caixas de frutas, novos itens comecem em uma nova linha, mantendo tudo limpo e organizado. */
 }
 
 
@@ -103,8 +99,8 @@ header h1 {
 }
 
 /* Ajuste para telas médias (largura até 1200px)*/
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
     .box {
-        width: calc(50% - 2rem); /* Largura de 50% para duas caixas por linha*/
+        width: calc(100% - 2rem); /* Largura de 50% para duas caixas por linha*/
     }
 }
