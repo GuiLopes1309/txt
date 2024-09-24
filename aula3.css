@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 50px;
+    background-color: blueviolet;
+}
+
+.section-1 {
+    padding: 200px;
+    background-color: deepskyblue;
+}
+
+.section-2 {
+    padding: 200px;
+    background-color: blue;
+}
+
+footer {
+    padding: 50px;
+    background-color: blueviolet;
+}
+
+/*@media (max-width:720px) {
+    header {
+        background-color: aqua;
+    } 
+
+    .section-1 {
+        background-color: darkblue;
+    }
+    .section-2 {
+        background-color: rgb(103, 103, 252);
+    }
+    
+    footer {
+        background-color: aqua;
+    }
+} */
+
+/*Estilos para tablets*/
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    header {
+        background-color: aqua;
+    } 
+
+    .section-1 {
+        background-color: darkblue;
+        color: white;
+    }
+
+    .section-2 {
+        background-color: rgb(103, 103, 252);
+        color: white;
+    }
+    
+    footer {
+        background-color: aqua;
+    }
+}
